@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <aside>
+            <header>
+                <h1>Admin</h1>
+                <button class="hide"><i class="fa fa-times"></i></button>
+            </header>
+            <div class="content">
+
+                <div class="com dash">
+                    <i class="fa fa-dashboard"></i>
+                    DASHBOARD
+                </div>
+
+            </div>
+            <footer>
+                
+                <button style="background: wheat !important; color:black;" onclick="changePassword()"><i class="fa fa-pencil"></i>CHANGE PASSWORD</button>
+                <button onclick="logout()"><i class="fa fa-lock"></i>LOG OUT</button>
+            </footer>
+        </aside>
+        <div class="body">
+            <header>
+                <button id="menu"><i class="fa fa-bars"></i></button>
+                <div class="con">
+                    <label for="search"><i class="fa fa-search"></i></label>
+                    <input type="search" id="search" placeholder="Search by Email...">
+                </div>
+                <!-- <h2>
+                    DASHBOARD
+                </h2> -->
+            </header>
+            <div class="content">
+
+                <div class="add" onclick="appendForm()">
+                    +
+                </div>
+
+            <section class="sec">
+
+
+                <div class="cart gr">
+                    <h2>Contect</h2>
+                    <b>25</b>
+                </div>
+
+                <div class="cart bl">
+                    <h2>Views</h2>
+                    <b>5</b>
+                </div>
+
+
+
+            </section>
+                <table class="tb">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        
+                        <th>Action</th>
+                    </tr>
+<!--                     
+                    <tr>
+                        <td id="name">Teke Nganji</td>
+                        <td id="email">tekenganji@gmail.com</td>
+                        
+                        <td>
+                            <button id="delete">Delete</button>
+                            <button id="edit">Edit</button>
+                        </td> 
+                    </tr>
+
+                    <tr>
+                        <td id="name">Teke Nganji</td>
+                        <td id="email">tekenganji@gmail.com</td>
+                        
+                        <td>
+                            <button id="delete">Delete</button>
+                            <button id="edit">Edit</button>
+                        </td> 
+                    </tr>
+
+                    <tr>
+                        <td id="name">Teke Nganji</td>
+                        <td id="email">tekenganji@gmail.com</td>
+                        
+                        <td>
+                            <button id="delete">Delete</button>
+                            <button id="edit">Edit</button>
+                        </td> 
+                    </tr>
+
+                    <tr>
+                        <td id="name">Teke Nganji</td>
+                        <td id="email">tekenganji@gmail.com</td>
+                        
+                        <td>
+                            <button id="delete">Delete</button>
+                            <button id="edit">Edit</button>
+                        </td> 
+                    </tr> -->
+
+
+                </table>
+
+
+            </div>
+        </div>
+<!--         
+<div class="fom">
+    <div class="c"><h2>Change Password</h2> <b><I><i class="fa fa-times"></i></I></b></div>
+        
+        <input type="password" id="ps1" placeholder="Enter old password">
+        <input type="password" id="ps2" placeholder="Enter New password">
+        <input type="password" id="ps3" placeholder="Confirm New password">
+       <div>
+         <input type="checkbox" id="checkbox">
+            <label for="checkbox">Show Password</label>
+         </div>
+        <button>Change</button>
+</div> -->
+        <!-- <form action="" id="form">
+            
+            <header>
+                <h1>IELTS</h1>
+                <button class="hide"><i class="fa fa-times"></i></button>
+            </header>
+            <h4>Test result form</h4>
+            <div>
+               
+                <div class="holder">
+                    <label for="cname">Candidate Name</label>
+                    <input type="text" id="cname">
+                </div>
+
+                <div class="holder">
+                    <label for="cnumber">Candidate Number</label>
+                    <input type="text" id="cnumber">
+                </div>
+
+                <div class="holder">
+                    <label for="trf">TRF Number</label>
+                    <input type="text" id="cnumber">
+                </div>
+
+                <div class="holder">
+                    <label for="center_number">Center Number</label>
+                    <input type="text" id="center_number">
+                </div>
+
+                <div class="holder">
+                    <label for="test_date">Test Date</label>
+                    <input type="date" id="test_date">
+                </div>
+
+                <div class="holder">
+                    <label for="test_type">Test Type</label>
+                    <input type="text" id="test_type">
+                </div>
+
+                
+                <h3>Test Results</h3>
+                <table class="table">
+                    <tr>
+                        <td><span>Listening</span> <input type="Tel"></td>
+                        <td><span>Reading</span> <input type="Tel"></td>
+                        <td><span>Writing</span> <input type="Tel"></td>
+                        <td><span>Speaking</span> <input type="Tel"></td>
+                        <td><span>Overallscore</span> <input type="Tel"></td>
+                    </tr>
+                </table>
+               
+            </div> <button id="submit">Submit</button>
+        </form> -->
+    </main>
+</body>
+<style>
+    .fom .c b{
+        margin-right: -10px;
+        font-size: large;
+    }
+    .fom .c{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .fom label{
+        color: gray;
+        font-size: small;
+    }
+    .fom{
+        position: fixed;
+        top:25%;
+        left:25%;
+        background: whitesmoke;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.178);
+        width: fit-content;
+
+    }
+    .fom input{
+        padding: 13px;
+        border-radius: 5px;
+        box-shadow: 0 0 .1em rgba(0, 0, 0, 0.415);
+        background: rgba(33, 33, 33, 0.03);
+        outline: none;
+        font-size: 16px;
+        border: none;
+    }
+    .fom button{
+        padding: 13px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.415);
+        background: deepskyblue;
+        outline: none;
+        font-size: 16px;
+        border: none;
+        color: white;
+    }
+    .fom button:active{
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.415);
+        opacity: .7;
+    }
+</style>
+<script>
+    const aside = document.querySelector('aside')
+    const menubtn = document.querySelector('#menu')
+    const hidebtn = document.querySelector('.hide')
+    const main = document.querySelector("main")
+
+
+    menubtn.addEventListener('click', e=>{
+        aside.style.right = 50 + '%'
+    })
+    hidebtn.addEventListener('click', e=>{
+        aside.style.right = 100 + '%'
+    })
+
+    const appendForm = (e) =>{
+        const form = document.createElement("form")
+        form.id = 'form'
+        form.method = 'POST'
+        form.action = '/auth/add'
+        form.innerHTML = `
+            <header>
+                <h1>IELTS</h1>
+                <div class="hide2"><i class="fa fa-times"></i></div>
+            </header>
+             <div class="holder">
+                    <label for="email">Candidate Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="holder">
+                    <label for="pass">Candidate Password</label>
+                    <input type="password" id="pass" name="password" required />
+                </div>
+            <h4>Test result form</h4>
+            <div>
+               
+                <div class="holder">
+                    <label for="cname">Candidate Name</label>
+                    <input type="text" id="cname" name="candidate_name" required />
+                </div>
+
+                <div class="holder">
+                    <label for="cnumber">Candidate Number</label>
+                    <input type="text" id="cnumber" name="candidate_number" required />
+                </div>
+
+                <div class="holder">
+                    <label for="trf">TRF Number</label>
+                    <input type="text" id="trf" name="trf" required />
+                </div>
+
+                <div class="holder">
+                    <label for="center_number">Center Number</label>
+                    <input type="text" id="center_number" name="center_number" required />
+                </div>
+
+                <div class="holder">
+                    <label for="test_date">Test Date</label>
+                    <input type="date" id="test_date" name="date" required />
+                </div>
+
+                <div class="holder">
+                    <label for="test_type">Test Type</label>
+                    <input type="text" id="test_type" name="test_type" required />
+                </div>
+
+                
+                <h3>Test Results</h3>
+                <table class="table">
+                    <tr>
+                        <td><span>Listening</span> <input type="Tel"  name="listening" required /></td>
+                        <td><span>Reading</span> <input type="Tel" name="reading" required /></td>
+                        
+                       
+                    </tr>
+                    <tr>
+                        <td><span>Writing</span> <input type="Tel"  name="writing" required /></td>
+                        <td><span>Speaking</span> <input type="Tel" name="speaking" required /></td>
+                    </tr>
+                    <tr>
+                         <td rowspan="2"><span>Overallscore</span> <input type="Tel" name="overall" required /></td>
+                    </tr>
+
+                </table>
+               
+            </div> <button id="submit">Submit</button>`
+            main.appendChild(form)
+            document.querySelector('.hide2').addEventListener('click', e =>{
+                e.preventDefault()
+                main.removeChild(form)
+            })
+            
+         
+            
+    }
+
+
+    fetch('/alluserinfo',
+    ).then(res => res.json()).then(data => {
+        console.log(data.length)
+        let tb = document.querySelector('.tb')
+        for(var i=0; i<data.length; i++){
+             tb.insertAdjacentHTML(`beforeend`,`<tr id="tt">
+                        <td id="name">${data[i].name}</td>
+                        <td id="email">${data[i].email}</td>
+                        
+                        <td>
+                            <button id="delete">Delete</button>
+                           
+                        </td> 
+                    </tr>`)
+        }
+        const tt = tb.querySelectorAll('#tt')
+        const search = document.querySelector("#search")
+        search.addEventListener('input', e =>{
+             const text = search.value.trim().toUpperCase()
+             
+        const em = tb.querySelectorAll('#email')
+       em.forEach((email, index )=> {
+        let eml = email.textContent.toUpperCase()
+        console.log(eml)
+        console.log(text)
+
+        if(eml.includes(text)){
+            tt[index].style.display = ''
+        }else if(text === ''){
+            tt[index].style.display = ''
+        }else{
+            tt[index].style.display = 'none'
+        }
+       })
+
+        })
+       
+
+        const email = document.querySelectorAll('#email')
+        email.forEach(em =>{
+            em.addEventListener("click", e =>{
+                console.log( em.textContent)
+               window.location.href = `/Ahome?param=${em.textContent}`
+        })
+        })
+
+        ////actions
+
+        var delet = document.querySelectorAll('#delete')
+        delet.forEach((dbtn, index) =>{
+            dbtn.addEventListener('click', e =>{
+                var em = (email[index].textContent)
+                const good = confirm(`Are you sure to delete the record with email "${em}"`);
+                if(good){
+                    fetch('/delete',{
+                        method:'POST',
+                        headers:{
+                            'Content-Type':'application/json',
+                        },
+                        body:JSON.stringify({email:em}),
+                    }).then(res => res.json())
+                    .then(data =>{
+                        alert(data.msg)
+                        if(data.status == 200){
+                            tt[index].style.display = 'none'
+                        }
+                    }).catch(err =>{
+                        console.error(err)
+                    })
+                }
+            })
+        })
+
+        
+        
+    }).catch(err =>{
+        console.error(err)
+        alert('Some thing went wrong on fetching please refresh!')
+    })
+    
+    const logout = () =>{
+        window.location.href = '/logout'
+    }
+
+    const changePassword = (e) =>{
+      const fom = document.createElement('div')
+      fom.innerHTML = `<div class="c"><h2>Change Password</h2> <b id="hided"><i class="fa fa-times"></i></b></div>
+        
+        <input type="text" id="ps1" placeholder="Enter old password">
+        <input type="text" id="ps2" placeholder="Enter New password">
+        <input type="text" id="ps3" placeholder="Confirm New password">
+       <div>
+         <input type="checkbox" id="checkbox">
+            <label for="checkbox">Show Password</label>
+         </div>
+        <button id="change">Change</button>`
+    main.appendChild(fom)
+    fom.classList.add('fom')
+         document.querySelector("#hided").addEventListener('click', e =>{
+            main.removeChild(fom)
+         })
+         document.querySelector('#change').addEventListener('click', e =>{
+            let ps1 = document.querySelector("#ps1")
+            let ps2 = document.querySelector("#ps2")
+            let ps3 = document.querySelector("#ps3")
+
+
+            if(ps1.value != '' || ps2.value != '' || ps2.value != ''){
+                if(ps2.value != ps3.value){
+                    alert('Confirmation password does not match')
+                }else{
+                    const data = {
+                    oldPassword: ps1.value,
+                    newPassword : ps2.value
+                }
+
+                fetch('/change', {
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json',
+                    },
+                    body:JSON.stringify(data)
+                }).then(res => res.json()).then(data =>{
+                    alert(data.msg)
+                    if(data.status == 201){
+                        main.removeChild(fom)
+                    }
+                }).catch(err =>{
+                    console.error(err)
+                })
+                }
+                
+            }else{
+                alert('Fill up all input');
+            }
+         })
+    }
+</script>
+</html>

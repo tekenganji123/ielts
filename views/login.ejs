@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <main> 
+        <form action="">
+            <img class="logo1" src="./images/logo1.png" alt="">
+            <h2>
+                Get your IELTS results
+            </h2>
+            <p>Your results available online are not official. They are provisional only until you receive your official Test Report Form (TRF).</p>
+
+
+            <div class="con">
+                <input type="email" id="email" placeholder="Enter Email" required />
+                <div class="p">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>Please fill in a valid user email</p>
+                </div>
+            </div>
+
+            <div class="con">
+                <input type="password" id="password" placeholder="Enter passwold" required />
+                <div class="p">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                   <p>Please fill in your password</p>
+                </div>
+            </div>
+
+            
+            <!-- <div class="con">
+                <input type="text" placeholder="Date of birth: DD / MM / YYYY" required />
+                <div class="p">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                   <p>Please fill in your date of birth</p>
+                </div>
+            </div>
+           
+
+            <div class="con">
+                <input type="text" placeholder="Passport number or ID number" required />
+                <div class="p">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                   <p>Please fill in your passport or ID number.</p>
+                </div>
+            </div> -->
+           
+            <center>
+                <button class="btn1">Get results</button>
+                <br>
+                 <button class="btn2" onclick="stay()">Cancel</button>
+            </center>
+
+            <center>
+                <img class="logo2" src="./images/logo2.png" alt="">
+            </center>
+            <center>
+                <p class="pp">IELTS is jointly owned by the British Council; IDP IELTS; and Cambridge University Press & Assessment</p>
+            </center>
+        </form>
+    </main>
+</body>
+<script>
+
+
+
+    const form = document.querySelector("form")
+    const email = document.querySelector("#email")
+    const password = document.querySelector("#password")
+
+    form.addEventListener('submit', e =>{
+        e.preventDefault()
+        const formData = {
+            email:email.value,
+            passwold:password.value,
+        }
+        console.log(formData)
+        
+        fetch('/auth/login', {
+            method: 'POST',
+        headers:{
+            'Content-Type':'application/json',
+        },
+        body: JSON.stringify(formData),
+        }).then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.data.status != 201){
+                alert(data.data.msg)
+            }else{
+                if(data.data.type == 'admin'){
+                    window.location.href = '/admindashboard'
+                }else{
+                    window.location.href = '/home'
+                }
+                
+            }
+        }).catch(err =>{
+            console.error('ERROR',err)
+        })
+    })
+
+    const stay = (e) =>{
+        e.preventDefault()
+    }
+</script>
+</html>
